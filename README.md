@@ -11,6 +11,9 @@ In connection.js, make sure to enter your database host, user, password etc. The
 
 The `find messages` test case takes about 3 seconds on a Core i3-3110M (2.4GHz) HP laptop (the database has zero row before running the test case).
 
+In `MailboxController.js`, remove all the `populate` calls and it takes about 95ms.
+
+
 
 
 
