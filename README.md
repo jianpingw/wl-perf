@@ -1,6 +1,16 @@
 # wl-perf
 
-a [Sails](http://sailsjs.org) application to test Waterline performance of populating associations.
+A [Sails](http://sailsjs.org) application to test Waterline performance of populating associations.
 
 In connection.js, make sure to enter your database host, user, password etc. The current configuation is for Postgresql, but it should be easy to change it to MySQL.
+
+## Run the test
+
+1. Start the SailsJS server: `node app.js`
+2. Open another terminal window, run the mocha test cases: `mocha --debug test/MessagePerf.test.js`
+
+The `find messages` test case takes about 3 seconds on a Core i3-3110M (2.4GHz) HP laptop (the database has zero row before running the test case).
+
+
+
 
