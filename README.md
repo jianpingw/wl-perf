@@ -9,9 +9,10 @@ In connection.js, make sure to enter your database host, user, password etc. The
 1. Start the SailsJS server: `node app.js`
 2. Open another terminal window, run the mocha test cases: `mocha --debug test/MessagePerf.test.js`
 
-The `find messages` test case takes about 3 seconds on a Core i3-3110M (2.4GHz) HP laptop (the database has zero row before running the test case).
+## Performance history
 
-In `MailboxController.js`, remove all the `populate` calls and it takes about 95ms.
+### sails-postgresql 0.11.0
+The `find messages` test case takes about 3 seconds on a Core i3-3110M (2.4GHz) HP laptop (the database has zero row before running the test case).
 
 
 
