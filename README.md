@@ -14,7 +14,7 @@ In connection.js, make sure to enter your database host, user, password etc. The
 ### sails-postgresql 0.11.0
 The `find messages` test case takes about 3 seconds on a Core i3-3110M (2.4GHz) HP laptop (the database has zero row before running the test case).
 
-### sails-postgresql 0.11.0 with [PR#224](sails-postgresql 0.11.0)
+### sails-postgresql 0.11.0 with [PR#224](https://github.com/balderdashy/sails-mysql/pull/274)
 The `find messages` test case takes about 200ms on a Core i3-3110M (2.4GHz) HP laptop (the database has zero row before running the test case).
 
 
