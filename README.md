@@ -20,6 +20,18 @@ The `find messages` test case takes about 200ms on a Core i3-3110M (2.4GHz) HP l
 @particlebanana gave an explanation for the reason of performance improvement:
 https://github.com/balderdashy/sails-postgresql/pull/224
 
+Quoted here:
+
+Postgres and MySql return their data as flat arrays so when populating you get rows with repetitive data in certain columns.
+
+| id    |   user  |  pet    |
+|-------|---------|---------|
+| 1     | sam     | fluffy  |
+| 1     | sam     | scruffy |
+| 1     | sam     | bubbles |
+
+When populating, Waterline takes this and loops through the array building up nested objects along the way. This fixes an issue where it wasn't skipping records that it had already processed (i.e. sam in the chart above).
+
 
 
 
